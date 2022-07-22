@@ -1,5 +1,5 @@
 # edx-Ml with python
-Edx 강의 ***\*Machine Learing with Python-From Linear Models to Deep Learning\**** 정리
+Edx 강의 **Machine Learing with Python-From Linear Models to Deep Learning** 정리
 
 
 
