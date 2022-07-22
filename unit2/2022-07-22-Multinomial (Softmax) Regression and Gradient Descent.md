@@ -16,13 +16,16 @@ use_math : true
 각 data point  $x^{(i)}$ 에 대하여, $j$ ($j = 0,1,\cdots,k-1$ )로 분류 될 확률을 계산 할 수 있다.
 
 어떤 $x$ 벡터에 대하여 softmax 함수 $h$ 를 다음과 같이 정의하면 각 라벨로 분류될 확률을 계산 할 수 있다.
+
+
 $$
 \begin {eqnarray}
 h(x) = \frac{1}{\sum _{j=0}^{k-1} e^{\theta _ j \cdot x / \tau }} \begin{bmatrix}  e^{\theta _0 \cdot x / \tau } \\ e^{\theta _1 \cdot x / \tau } \\ \vdots \\ e^{\theta _{k-1} \cdot x / \tau } \end{bmatrix},
 \end {eqnarray}
 $$
-  하지만 $e^{\theta_j \cdot x/ \tau}$ 항은 매우 클 수도 작을 수도 있으므로 overflow error를 발생시킬 수 있으므로 적당한 값을 지수에서 빼도록 할 것이다.
+  
 
+하지만 $e^{\theta_j \cdot x/ \tau}$ 항은 매우 클 수도 작을 수도 있으므로 overflow error를 발생시킬 수 있으므로 적당한 값을 지수에서 빼도록 할 것이다.
 
 $$
 \begin {eqnarray}
